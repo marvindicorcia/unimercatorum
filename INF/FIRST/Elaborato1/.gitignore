@@ -3,3 +3,7 @@
 # ignore all db
 *.dat
 *.o
+
+# L’eseguibile del progetto (mac primo windows secondo)
+biblioteca
+biblioteca.exe
