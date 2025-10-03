@@ -9,15 +9,14 @@ CFLAGS = -Wall -Wextra -std=c11
 SRC = main.c biblioteca.c
 OBJ = $(SRC:.c=.o)
 
-# Regola principale
 $(TARGET): $(OBJ)
 	$(CC) $(CFLAGS) -o $(TARGET) $(OBJ)
 
-# Compilazione file .c in .o
+
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-# Esegui programma (compila se serve)
+# Esegui programma (ricompila se serve)
 run: $(TARGET)
 	./$(TARGET)
 

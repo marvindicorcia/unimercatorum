@@ -3,7 +3,7 @@
 #include <string.h>
 #include "biblioteca.h"
 
-// Inserisci nuovo libro
+// Inserisci un nuovo libro
 void inserisciLibro() {
     FILE *fp = fopen(FILENAME, "ab");
     if (!fp) {
@@ -38,7 +38,7 @@ void inserisciLibro() {
     printf("Libro inserito con successo!\n");
 }
 
-// Modifica libro cercando per ISBN
+// Modifica il libro cercando per ISBN
 void modificaLibro() {
     FILE *fp = fopen(FILENAME, "r+b");
     if (!fp) {
@@ -129,7 +129,7 @@ void ricercaLibro() {
     fclose(fp);
 }
 
-// Cancellazione libro per ISBN
+// Cancellazione del libro per ISBN
 void cancellaLibro() {
     FILE *fp = fopen(FILENAME, "rb");
     if (!fp) {
@@ -168,7 +168,7 @@ void cancellaLibro() {
     rename("temp.dat", FILENAME);
 
     if (!trovato)
-        printf("Nessun libro trovato con ISBN %s.\n", isbn);
+        printf("Nessun libro trovato con il seguente ISBN: %s.\n", isbn);
 }
 
 // Stampa catalogo
@@ -191,9 +191,8 @@ void stampaCatalogo() {
     const int w_isbn = 15;
 
     int table_width = w_id + w_titolo + w_autore + w_editore + w_anno + w_isbn + 7*3 + 1;
-    // 7 colonne 8 separatori "|", + spazi di padding
 
-    printf("\n=== Catalogo Biblioteca ===\n");
+    printf("\n========= Catalogo Biblioteca =========n");
 
     for (int i = 0; i < table_width; i++) printf("-");
     printf("\n");

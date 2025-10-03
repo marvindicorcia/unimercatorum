@@ -12,7 +12,7 @@ typedef struct {
     char isbn[20];
 } Libro;
 
-// Prototipi funzioni
+// Prototipi delle funzioni
 void inserisciLibro();
 void modificaLibro();
 void ricercaLibro();
