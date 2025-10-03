@@ -2,4 +2,4 @@
 *.log
 # ignore all db
 *.dat
-*.vscode
+*.o
